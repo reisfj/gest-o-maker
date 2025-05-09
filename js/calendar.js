@@ -23,6 +23,7 @@ export async function renderCalendar() {
       title: `${a.nome} - ${a.hora}`,
       start: a.data,
     })),
+      locale: 'pt-br'
   });
 
   calendar.render();
