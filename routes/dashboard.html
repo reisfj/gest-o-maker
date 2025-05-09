@@ -1,0 +1,73 @@
+<div
+  class="d-flex flex-column align-items-center py-5 px-4 px-md-5 text-center text-sm-center"
+>
+  <h1 class="fs-1 me-2">Olá, seja bem-vindo!</h1>
+
+  <p class="fs-6">
+    Confira as principais informações e estatísticas sobre o seu consultório.
+  </p>
+</div>
+
+<div class="container-fluid px-4 px-md-5 py-3">
+  <div class="row">
+    <div class="col-12 col-lg-6 mb-4 d-flex">
+      <a
+        href="#"
+        data-page="routes/patient.html"
+        class="card-equal w-100 d-flex justify-content-center align-items-center text-decoration-none text-dark"
+      >
+        <div class="d-flex flex-column align-items-center px-1">
+          <img src="/assets/patient.svg" alt="" style="width: 100px" />
+          <p style="font-size: 1.5rem; margin-top: 1rem">Total de pacientes</p>
+        </div>
+        <h5 id="totalPatients" class="display-1 ms-4"></h5>
+      </a>
+    </div>
+
+
+    <div class="col-12 col-lg-6 mb-4 d-flex">
+      <a
+        href="#"
+        data-page="routes/report.html"
+        class="card-equal w-100 d-flex justify-content-center align-items-center text-decoration-none text-dark p-4"
+      >
+        <canvas
+          id="myChart"
+          style="max-height: 200px; max-width: 100%"
+        ></canvas>
+      </a>
+    </div>
+
+    
+    <div class="col-12 col-lg-6 mb-4 d-flex">
+      <a
+        href="#"
+        data-page="routes/schedule.html"
+        class="card-equal w-100 d-flex justify-content-center align-items-center text-decoration-none text-dark"
+      >
+        <div class="d-flex flex-column align-items-center px-3">
+          <img src="/assets/calendar-black.svg" alt="" style="width: 100px" />
+          <p style="font-size: 1.5rem; margin-top: 1rem">Consultas do Dia</p>
+        </div>
+        <h5 class="display-1 ms-4">4</h5>
+      </a>
+    </div>
+
+    
+    <div class="col-12 col-lg-6 mb-4 d-flex">
+      <a
+        href="#"
+        data-page="routes/schedule.html"
+        class="card-equal w-100 d-flex justify-content-center align-items-center text-decoration-none text-dark"
+      >
+        <div class="d-flex flex-column align-items-center px-1">
+          <img src="/assets/users-black.svg" alt="" style="width: 100px" />
+          <p style="font-size: 1.4rem; margin-top: 1rem">
+            Agendamentos Futuros
+          </p>
+        </div>
+        <h5 class="display-1 ms-4">12</h5>
+      </a>
+    </div>
+  </div>
+</div>

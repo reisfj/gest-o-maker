@@ -1,0 +1,98 @@
+<div class="container py-5" style="z-index: 0;">
+  <h1 class="mb-4 fw-semibold text-dark">Pacientes</h1>
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <button
+      class="btn btn-outline-primary rounded px-4 shadow-sm"
+      data-bs-toggle="modal"
+      data-bs-target="#addPatientModal"
+    >
+      + Adicionar
+    </button>
+    <div class="input-group" style="max-width: 20rem">
+      <input
+        type="text"
+        id="searchInput"
+        class="form-control rounded-start-pill shadow-sm border-end-0"
+        placeholder="Pesquisar paciente..."
+        aria-label="Pesquisar paciente"
+      />
+      <button
+        class="btn btn-light border-start-0 rounded-end-pill shadow-sm"
+        type="button"
+        id="searchButton"
+        onclick="searchPatients()"
+      >
+        <img src="/assets/search.svg" alt="Buscar" style="width: 1rem;">
+      </button>
+    </div>
+  </div>
+
+  <div class="card shadow-lg border-0 rounded-4">
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-hover align-middle mb-0">
+          <thead class="table-light">
+            <tr>
+              <th>#</th>
+              <th>Nome</th>
+              <th>Idade</th>
+              <th>Contato</th>
+              <th class="text-center">Ações</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div id="pagination" class="d-flex justify-content-end mt-4 pe-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal de adicionar paciente -->
+<div
+  class="modal fade"
+  id="addPatientModal"
+  tabindex="-1"
+  aria-labelledby="addPatientModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <form id="addPatientForm" class="modal-content rounded-4 shadow-lg border-0">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fw-semibold text-primary" id="addPatientModalLabel">
+          Adicionar Paciente
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Fechar"
+        ></button>
+      </div>
+      <div class="modal-body pt-0">
+        <div class="mb-3">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form-control shadow-sm" id="name" name="name" maxlength="50" required />
+          <small class="form-text text-muted">Máximo de 50 caracteres.</small>
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">Idade</label>
+          <input type="number" class="form-control shadow-sm" id="age" name="age" min="0" max="110" required />
+          <small class="form-text text-muted">Entre 0 e 110 anos.</small>
+        </div>
+        <div class="mb-3">
+          <label for="contact" class="form-label">Contato</label>
+          <input type="text" class="form-control shadow-sm" name="contact" id="contact" required />
+          <small class="form-text text-muted">Formato: (11) 1111-1111 ou (99) 99999-9999</small>
+        </div>
+      </div>
+      <div class="modal-footer border-0 pt-0">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">
+          Cancelar
+        </button>
+        <button type="submit" class="btn btn-primary px-4">Adicionar</button>
+      </div>
+    </form>
+  </div>
+</div>
