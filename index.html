@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Maker</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- FullCalendar -->
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar border-details bg-light z-index-0">
+      <div class="container d-flex align-items-center">
+        <a
+          href="routes/dashboard.html"
+          class="d-flex link-body-emphasis text-decoration-none"
+          title="Gestão Maker"
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+        >
+          <img src="img/logo.png" width="100" height="30" alt="logo" />
+        </a>
+        <div class="dropdown">
+          <a
+            href="#"
+            class="d-flex align-items-center justify-content-center link-body-emphasis text-decoration-none dropdown-toggle"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="img/ai-generated-8737182_640.jpg"
+              alt="mdo"
+              width="30"
+              height="30"
+              class="rounded-circle me-2"
+            />
+            <span class="fs-6">Pamela <strong>Canela</strong> </span>
+          </a>
+          <ul class="dropdown-menu text-small shadow">
+            <li><a class="dropdown-item" href="#" data-page="routes/settings.html">Perfil</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Sair</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+   
+    <button
+      class="btn btn-primary d-sm-none mt-3 bg-dark z-index-1 pt-1 rounded-end-5"
+      id="sidebarToggle"
+      style="position: fixed; left: 0; border: none; z-index: 105;"
+    >
+      <img class="icons" src="assets/menu-bars.svg" alt="" srcset="" />
+    </button>
+    <aside
+      id="sidebar"
+      class="sidebar navigation d-none d-sm-block d-flex flex-column flex-shrink-0 bg-dark rounded-end-5"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 3.2rem; /* Largura do Sidebar */
+        height: 100%;
+        z-index: 105;
+        padding-top: 4rem;
+      "
+    >
+      <nav>
+        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+          <li class="nav-item">
+            <button
+              id="sidebarClose"
+              class="d-sm-none nav-link pb-5 rounded-0"
+              style="padding-left: 13px"
+            >
+              <img class="icons" src="assets/left.svg" alt="" srcset="" />
+            </button>
+            <a
+              href="#"
+              data-page="routes/dashboard.html"
+              class="nav-link pb-3 rounded-0"
+              style="padding-left: 5px"
+              aria-current="page"
+              title="Home"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+            >
+              <img class="icons" src="assets/home.svg" alt="" srcset="" />
+
+              <span class="text-light m-0" style="font-size: 10px">Home</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-page="routes/patient.html"
+              class="nav-link pb-3 rounded-0"
+              style="padding-left: 5px"
+              title="Pacientes"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+            >
+              <img class="icons" src="assets/users.svg" alt="" srcset="" />
+
+              <span class="text-light m-0" style="font-size: 10px"
+                >Pacientes</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-page="routes/schedule.html"
+              class="nav-link pb-3 rounded-0"
+              style="padding-left: 5px"
+              title="Agendar"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+            >
+              <img class="icons" src="assets/calendar.svg" alt="" srcset="" />
+
+              <span class="text-light m-0" style="font-size: 10px"
+                >Agendar</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-page="routes/report.html"
+              class="nav-link pb-3 rounded-0"
+              style="padding-left: 5px"
+              title="Relatório"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+            >
+              <img class="icons" src="assets/graphic.svg" alt="" srcset="" />
+
+              <span class="text-light m-0" style="font-size: 10px"
+                >Relatório</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              data-page="routes/settings.html"
+              class="nav-link pb-3 rounded-0"
+              style="padding-left: 5px"
+              title="Configurações"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+            >
+              <img class="icons" src="assets/gear.svg" alt="" srcset="" />
+
+              <span class="text-light m-0" style="font-size: 10px"
+                >Config.</span
+              >
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main id="main-content" class="main-content ms-md-5">
+    
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="js/charts.js"></script>
+
+   
+    <script type="module" src="js/calendar.js"></script>
+
+    <script type="module" src="js/main.js"></script>
+    
+  </body>
+</html>

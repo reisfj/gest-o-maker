@@ -1,0 +1,65 @@
+h1, h5 {
+  letter-spacing: -0.5px;
+}
+#main-content {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+#main-content.fade-out {
+  opacity: 0;
+}
+
+.border-details {
+  box-shadow: 1px -1px 10px -1px rgba(130, 130, 131, 0.2);
+   border: 1px solid #dee2e6;
+  border-radius: 10px;
+}
+.icons {
+  width: 25px;
+  height: 23px;
+}
+.card-equal {
+  min-height: 300px;
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+.table td {
+  width: 14.28%;
+  height: 100px;
+  vertical-align: top;
+}
+
+.table-primary {
+  position: relative;
+}
+
+.table-primary::after {
+  content: 'Today';
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 0.8rem;
+  color: #0d6efd;
+}
+
+button[title="Editar"]:hover {
+  background-color: #f8fc8699;
+  border-color: #f8fc8699;
+}
+
+button[title="Excluir"]:hover {
+  background-color: #ffb3b38d;
+  border-color: #ffb3b38d;
+}
+
+button[title="Editar"] img,
+button[title="Excluir"] img {
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+button[title="Editar"]:hover img,
+button[title="Excluir"]:hover img {
+  filter: none;
+}
